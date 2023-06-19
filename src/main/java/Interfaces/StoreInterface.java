@@ -1,7 +1,9 @@
 package Interfaces;
 
+import java.util.Collection;
+
 public interface StoreInterface {
     void add(Integer productId);
 
-    Integer get(Integer productId);
+    Collection<Integer> get() ;
 }

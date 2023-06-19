@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
+
 @RestController
 @RequestMapping("/store/order")
 public class StoreController {
@@ -22,7 +24,7 @@ public class StoreController {
     }
 
     @GetMapping("/get")
-    public Integer get(@RequestParam Integer productId) {
-        return storeInterface.get(productId);
+    public Collection<Integer> get() {
+        return storeInterface.get();
     }
 }
