@@ -2,6 +2,7 @@ package Services;
 
 import Exceptions.ProductIdIsAlreadyAdded;
 import Interfaces.StoreInterface;
+import com.task.spring.spring.Store;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,22 +12,22 @@ import java.util.List;
 
 @Service
 public class StoreService implements StoreInterface {
-    private final List<Integer> items;
+    private final List<Store> items;
 
     public  StoreService() {
         this.items = new ArrayList<>();
     }
     @Override
     public void add(Integer productId) {
-        if (items.contains(productId)) {
+        Store store = new Store(productId);
+        if (items.contains(store.getProductId())) {
             throw new ProductIdIsAlreadyAdded("The productId already exists");
         }
-        items.add(productId);
-
+        items.add(store);
     }
 
     @Override
-    public Collection<Integer> get() {
+    public Collection<Store> get() {
         return Collections.unmodifiableList(items);
     }
 }

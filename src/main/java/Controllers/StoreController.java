@@ -1,6 +1,7 @@
 package Controllers;
 
 import Interfaces.StoreInterface;
+import com.task.spring.spring.Store;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,7 @@ public class StoreController {
     }
 
     @GetMapping("/get")
-    public Collection<Integer> get() {
+    public Collection<Store> get() {
         return storeInterface.get();
     }
 }
