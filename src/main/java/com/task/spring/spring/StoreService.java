@@ -1,7 +1,7 @@
-package Services;
+package com.task.spring.spring;
 
-import Exceptions.ProductIdIsAlreadyAdded;
-import Interfaces.StoreInterface;
+import com.task.spring.spring.ProductIdIsAlreadyAdded;
+import com.task.spring.spring.StoreInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

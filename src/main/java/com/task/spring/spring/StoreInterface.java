@@ -1,4 +1,4 @@
-package Interfaces;
+package com.task.spring.spring;
 
 import java.util.Collection;
 
